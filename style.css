@@ -1,14 +1,91 @@
 body {
-    font-family: Arial;
-    text-align: center;
-    margin-top: 50px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
 }
 
-input {
-    padding: 8px;
+header {
+    background: #002b5c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    gap: 30px;
+}
+
+.event-details {
+    max-width: 350px;
+}
+
+.form-card {
+    background: white;
+    padding: 25px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.form-card h2 {
+    text-align: center;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.gender {
+    margin: 10px 0;
 }
 
 button {
-    padding: 8px 15px;
+    width: 100%;
+    padding: 10px;
+    background: #002b5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #004080;
+}
+
+#successMessage {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background: #002b5c;
+    color: white;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
 }

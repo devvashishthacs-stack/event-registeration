@@ -1,18 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Online Event Registration</title>
+    <meta charset="UTF-8">
+    <title>IILM University Event Registration</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Online Event Registration</h1>
+<header>
+    <h1>IILM University, Greater Noida</h1>
+    <p class="subtitle">Annual Tech & Cultural Fest 2026</p>
+</header>
 
-<form id="registrationForm" onsubmit="return false;"></form>
-    <input type="text" placeholder="Enter Name" required><br><br>
-    <input type="email" placeholder="Enter Email" required><br><br>
-    <button type="submit">Register</button>
-</form>
+<div class="container">
+    <div class="event-details">
+        <h2>Event Details</h2>
+        <p><strong>Date:</strong> 15 March 2026</p>
+        <p><strong>Time:</strong> 10:00 AM – 4:00 PM</p>
+        <p><strong>Venue:</strong> Main Auditorium, IILM University</p>
+        <p>Join us for an exciting day filled with competitions, workshops, and cultural performances.</p>
+    </div>
+
+    <div class="form-card">
+        <h2>Register Now</h2>
+
+        <form id="registrationForm">
+
+            <input type="text" id="name" placeholder="Full Name" required>
+
+            <input type="email" id="email" placeholder="Email Address" required>
+
+            <input type="text" id="phone" placeholder="Phone Number" maxlength="10" required>
+
+            <input type="text" id="course" placeholder="Course / Department" required>
+
+            <select id="year" required>
+                <option value="">Select Year</option>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year</option>
+            </select>
+
+            <div class="gender">
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="Male" required> Male
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Other"> Other
+            </div>
+
+            <select id="eventSelect" required>
+                <option value="">Select Event</option>
+                <option>Hackathon</option>
+                <option>Dance Competition</option>
+                <option>Debate</option>
+                <option>Workshop</option>
+            </select>
+
+            <button type="submit">Register</button>
+
+            <div id="successMessage"></div>
+
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 IILM University, Greater Noida | Contact: info@iilm.edu</p>
+</footer>
 
 <script src="script.js"></script>
 
